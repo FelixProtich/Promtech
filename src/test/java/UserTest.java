@@ -17,7 +17,7 @@ public class UserTest {
 
     @Test
     public void getUser(){
-        assertNotNull("name is null",user.getUser());
+        assertNotNull("name is null",user());
     }
     
 }
