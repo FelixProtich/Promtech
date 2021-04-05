@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_navigation_graph"
+    app:startDestination="@id/home_fragment">
+
+    <activity
+        android:id="@+id/login"
+        android:name="com.felix.promtech.Login"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" >
+        <action
+            android:id="@+id/login_to_home_fragment"
+            app:destination="@id/home_fragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_login_to_registrationActivity"
+            app:destination="@id/registrationActivity"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
+    </activity>
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.felix.promtech.Fragments.home_fragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_home_fragment_to_your_tasks_fragment"
+            app:destination="@id/your_tasks_fragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/login_activity"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_home_fragment_to_finished_tasks_fragment"
+            app:destination="@id/finished_tasks_fragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/login_activity"/>
+    </fragment>
+    <fragment
+        android:id="@+id/your_tasks_fragment"
+        android:name="com.felix.promtech.Fragments.your_tasks_fragment"
+        android:label="fragment_your_tasks"
+        tools:layout="@layout/fragment_your_tasks" />
+    <fragment
+        android:id="@+id/finished_tasks_fragment"
+        android:name="com.felix.promtech.Fragments.finished_tasks_fragment"
+        android:label="fragment_finished_tasks"
+        tools:layout="@layout/fragment_finished_tasks" />
+    <fragment
+        android:id="@+id/userProfile_fragment"
+        android:name="com.felix.promtech.Fragments.userProfile_fragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" >
+        <action
+            android:id="@+id/action_userProfile_fragment_to_change_profile2"
+            app:destination="@id/change_profile2" />
+        <action
+            android:id="@+id/action_userProfile_fragment_to_social_media_profiles2"
+            app:destination="@id/social_media_profiles2" />
+        <action
+            android:id="@+id/action_userProfile_fragment_to_post_prices_fragment"
+            app:destination="@id/post_prices_fragment" />
+        <action
+            android:id="@+id/action_userProfile_fragment_to_payment_details2"
+            app:destination="@id/payment_details2" />
+    </fragment>
+    <fragment
+        android:id="@+id/change_profile2"
+        android:name="com.felix.promtech.Fragments.change_profile"
+        android:label="fragment_change_profile"
+        tools:layout="@layout/fragment_change_profile" />
+    <fragment
+        android:id="@+id/social_media_profiles2"
+        android:name="com.felix.promtech.Fragments.Social_media_profiles"
+        android:label="fragment_social_media_profiles"
+        tools:layout="@layout/fragment_social_media_profiles" />
+    <fragment
+        android:id="@+id/post_prices_fragment"
+        android:name="com.felix.promtech.Fragments.Post_prices_fragment"
+        android:label="fragment_post_prices"
+        tools:layout="@layout/fragment_post_prices" />
+    <fragment
+        android:id="@+id/payment_details2"
+        android:name="com.felix.promtech.Fragments.Payment_details"
+        android:label="fragment_payment_details"
+        tools:layout="@layout/fragment_payment_details" />
+    <activity
+        android:id="@+id/registrationActivity"
+        android:name="com.felix.promtech.RegistrationActivity"
+        android:label="activity_registration"
+        tools:layout="@layout/activity_registration" />
+</navigation>

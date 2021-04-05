@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#b3e5fc">
+
+        <TextView
+            android:id="@+id/campaign_id"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/campaign_id" />
+
+        <TextView
+            android:id="@+id/campaign_name"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/campaign_name"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/campaign_details"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:textColor="#1a237e"
+            android:text="@string/view_more_details" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

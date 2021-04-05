@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Promtech</string>
+    <string name="username">Username</string>
+    <string name="password">password</string>
+    <string name="login">LOGIN</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="create_account">Create Account</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_tasks">YOUR TASKS</string>
+    <string name="finished_tasks">FINISHED TASKS</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="profile_settings">Profile Settings</string>
+    <string name="profile_details">Profile Details</string>
+    <string name="social_media_profiles">Social Media Profiles</string>
+    <string name="payment_details">Payment Details</string>
+    <string name="my_groups">My Groups</string>
+    <string name="change_profile">Change Profile</string>
+    <string name="basic_information">Basic Information</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="gender">Gender</string>
+    <string name="location">Location</string>
+    <string name="monthly_income">Monthly Income</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="id_no">ID No</string>
+    <string name="email">Email</string>
+    <string name="save">Save</string>
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
+    <string name="twitter">Twitter</string>
+    <string name="post_prices">Post Prices</string>
+    <string name="your_prices">Your Prices</string>
+    <string name="welcome_to_promtech">Welcome to PromTech</string>
+    <string name="already_a_member_login">Already a member? Login</string>
+    <string name="sigup_password">Password</string>
+    <string name="name">Name</string>
+    <string name="no_account_yet_create_one">No account yet? Create one</string>
+    <string name="pending_payments"><![CDATA[Pending Payments >>>]]></string>
+    <string name="campaign_id">Id:</string>
+    <string name="campaign_name">Campaign name:</string>
+    <string name="view_more_details"><![CDATA[View more >>>]]></string>
+    <string name="ongoing_tasks">Ongoing Tasks</string>
+    <string name="app_settings">App Settings</string>
+    <string name="campaignname">Name:</string>
+    <string name="idcampaign">id:</string>
+    <string name="campaign">CAMPAIGN</string>
+</resources>

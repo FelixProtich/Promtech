@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.change_profile">
+
+        <TextView
+            android:id="@+id/change_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:textStyle="bold"
+            android:text="@string/change_profile"/>
+
+        <TextView
+            android:id="@+id/change_profile_pic"
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/ic_userprofile"
+            />
+
+
+
+        <TextView
+            android:id="@+id/basic_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="175dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/basic_information"/>
+
+        <TextView
+            android:id="@+id/change_date_of_birth"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/change_profile_rounded"
+            android:textAlignment="center"
+            android:text="@string/date_of_birth"/>
+
+        <TextView
+            android:id="@+id/change_gender"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="270dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/change_profile_rounded"
+            android:textAlignment="center"
+            android:text="@string/gender"/>
+
+        <TextView
+            android:id="@+id/change_location"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="340dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/change_profile_rounded"
+            android:textAlignment="center"
+            android:text="@string/location"/>
+
+        <TextView
+            android:id="@+id/change_monthly_income"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="410dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/change_profile_rounded"
+            android:textAlignment="center"
+            android:text="@string/monthly_income"/>
+
+        <TextView
+            android:id="@+id/contact_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="480dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/contact_information"/>
+
+        <TextView
+            android:id="@+id/change_id_number"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="500dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/change_profile_rounded"
+            android:textAlignment="center"
+            android:text="@string/id_no"/>
+
+        <TextView
+            android:id="@+id/change_email"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="550dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/change_profile_rounded"
+            android:textAlignment="center"
+            android:text="@string/email"/>
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="600dp"
+        android:background="@drawable/login_shape"
+        android:text="@string/save" />
+
+
+</RelativeLayout>

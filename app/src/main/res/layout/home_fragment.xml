@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.home_fragment"
+    android:background="#e6ffff">
+
+    <LinearLayout
+        android:id="@+id/home_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:text="@string/dashboard"/>
+
+        <TextView
+            android:id="@+id/pending_payments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:text="@string/pending_payments"/>
+
+        <TextView
+            android:id="@+id/your_tasks"
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:background="@drawable/your_task_rounded_corner"
+            android:text="@string/your_tasks" />
+
+
+        <TextView
+            android:id="@+id/finished_tasks"
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="@string/finished_tasks"
+            android:background="@drawable/finished_tasks_rounded_corner"/>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>
