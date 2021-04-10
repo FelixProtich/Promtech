@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.felix.promtech">
     <!-- Declaring the required permissions -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,13 +15,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Promtech">
-        <activity android:name=".AddNewUserActivity"></activity>
+        <activity android:name=".AddNewUserActivity" />
 
         <provider
             android:name=".TasksProvider"
             android:authorities="promtechtasks"
             android:enabled="true"
             android:exported="false" />
+
+        <service android:name=".MyJobService"
+            android:enabled="true"
+            android:label="MyJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
 
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".Login" />

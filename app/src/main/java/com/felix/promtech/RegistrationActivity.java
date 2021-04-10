@@ -1,7 +1,9 @@
 package com.felix.promtech;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,7 +11,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.felix.promtech.Db.AppDatabase;
+import com.felix.promtech.Db.User;
 import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.List;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -68,6 +74,24 @@ public class RegistrationActivity extends AppCompatActivity {
 
         if (isNameValid && isEmailValid && isPasswordValid) {
             Toast.makeText(getApplicationContext(), "Successfully", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(this, AddNewUserActivity.class);
+
+
         }
+    }
+
+    private void loadUsersList(){
+        AppDatabase db = AppDatabase.getDbInstance(this.getApplicationContext());
+        List<User> userList = db.userDao().getAllUsers();
+        
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (requestCode == 100)
+            loadUsersList();
+
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

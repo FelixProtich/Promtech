@@ -13,6 +13,6 @@ public class User {
     @ColumnInfo(name = "first_name")
     public String firstName;
 
-    @ColumnInfo(name = "last_name")
-    public String lastName;
+    @ColumnInfo(name = "email")
+    public String email;
 }

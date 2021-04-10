@@ -1,12 +1,16 @@
 package com.felix.promtech;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.nfc.Tag;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Adapter;
 
@@ -20,6 +24,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "MainActivity";
+
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
     List<ModelClass>tasksList;
@@ -30,8 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
+        startBackgroundTask();
         initData();
         initRecyclerView();
 
@@ -39,6 +44,17 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.Fragment_Container, new home_fragment()).commit();
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    private void startBackgroundTask() {
+        try {
+
+            BackgroundUtil.scheduleBackgroundTask(this);
+
+            }catch(Exception e){
+            Log.e(TAG, "startBackgroundTask", e);
+        }
     }
 
     private void initData() {
