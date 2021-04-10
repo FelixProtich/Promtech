@@ -25,8 +25,7 @@ public class TasksProvider extends ContentProvider {
 
     static final String _ID = "_id";
     static final String TASK_NAME = "task_name";
-    static final String TASK_AMOUNT = "task_amount";
-    
+
     private static HashMap<String, String> TASKS_PROJECTION_MAP;
 
     static final int TASKS = 1;

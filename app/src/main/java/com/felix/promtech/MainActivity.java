@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         initData();
         initRecyclerView();
 
@@ -64,31 +66,29 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    private final BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener
+            = item -> {
 
-            Fragment selectedFragment = null;
-            switch(item.getItemId()){
+                Fragment selectedFragment = null;
+                switch(item.getItemId()){
 
-                case R.id.home:
-                    selectedFragment = new home_fragment();
-                    break;
+                    case R.id.home:
+                        selectedFragment = new home_fragment();
+                        break;
 
-                case R.id.profile:
-                    selectedFragment = new userProfile_fragment();
-                    break;
+                    case R.id.profile:
+                        selectedFragment = new userProfile_fragment();
+                        break;
 
-                case R.id.settings:
-                    selectedFragment = new settings_fragment();
-                    break;
+                    case R.id.settings:
+                        selectedFragment = new settings_fragment();
+                        break;
 
-            }
+                }
 
-            getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_Container, selectedFragment);
+                getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_Container, selectedFragment);
 
-            return true;
-        }
-    };
+                return true;
+            };
 
 }

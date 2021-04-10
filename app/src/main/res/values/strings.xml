@@ -44,4 +44,14 @@
     <string name="campaignname">Name:</string>
     <string name="idcampaign">id:</string>
     <string name="campaign">CAMPAIGN</string>
+    <string name="edit_payment_details">Edit Payment Details</string>
+    <string name="save_details">Save Details</string>
+    <string name="bank_avatar">bank_avatar</string>
+    <string name="mpesa">mpesa</string>
+    <string name="bank_account">Bank Account</string>
+    <string name="mobile_money">Mobile Money</string>
+    <string name="email_error">email_error</string>
+    <string name="name_error">name_error</string>
+    <string name="password_error">password_error</string>
+    <string name="error_invalid_password">invalid_password</string>
 </resources>
